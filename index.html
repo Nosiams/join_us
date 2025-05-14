@@ -6,11 +6,11 @@
   <title>NOSIAMS - Официальный магазин на Wildberries</title>
   <style>
     :root {
-      --primary-color: #FFB6C1; /* Нежно-розовый */
-      --hover-color: #FFA7B3; /* Чуть насыщеннее при наведении */
-      --bg-color: #FFF0F5; /* Лавандовый румянец (пастельный фон) */
-      --text-color: #555; /* Мягкий серый вместо черного */
-      --accent-color: #FFD1DC; /* Светло-розовый для акцентов */
+      --primary-color: #FF6B8B; /* Акцентный цвет кнопки */
+      --hover-color: #FF4757; /* Цвет кнопки при наведении */
+      --container-bg: #FFDFE7; /* Точный розовый из скриншота Яндекс.Диска */
+      --text-color: #5A2A38; /* Тёмно-розовый для текста (контрастный) */
+      --light-text: #FFF; /* Белый для второстепенного текста */
     }
     
     body {
@@ -18,32 +18,33 @@
       text-align: center;
       padding: 5px;
       margin: 0;
-      line-height: 1.6; /* Увеличим межстрочный интервал */
+      line-height: 1.6;
       min-height: 60vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background-color: var(--bg-color);
+      background-color: #FFF9FA; /* Сверхсветлый розовый для фона страницы */
       color: var(--text-color);
     }
     
     .container {
-      background-color: white;
+      background-color: var(--container-bg);
       padding: 40px 20px;
       border-radius: 18px;
-      box-shadow: 0 4px 12px rgba(255, 182, 193, 0.15); /* Тень с розовым оттенком */
+      box-shadow: 0 4px 12px rgba(255, 120, 146, 0.2);
       margin: 0 auto;
       width: 92%;
       max-width: 600px;
-      border: 1px solid var(--accent-color); /* Тонкая розовая рамка */
+      border: none;
     }
     
     .brand-title {
       font-size: 28px;
       font-weight: 700;
       margin-bottom: 20px;
-      color: var(--primary-color);
-      letter-spacing: 1px; /* Добавим изящества */
+      color: var(--text-color);
+      letter-spacing: 1px;
+      text-shadow: 0 1px 2px rgba(90, 42, 56, 0.1);
     }
     
     .logo {
@@ -52,11 +53,7 @@
       margin: 0 auto 25px;
       display: block;
       transition: transform 0.25s ease;
-      filter: drop-shadow(0 2px 4px rgba(255, 182, 193, 0.3)); /* Розовая тень для лого */
-    }
-    
-    .logo:hover {
-      transform: scale(1.03);
+      filter: drop-shadow(0 2px 4px rgba(90, 42, 56, 0.1));
     }
     
     .btn {
@@ -72,20 +69,21 @@
       font-size: 16px;
       transition: all 0.25s ease;
       border: none;
-      box-shadow: 0 3px 8px rgba(255, 182, 193, 0.3); /* Мягкая тень */
+      box-shadow: 0 3px 8px rgba(255, 107, 139, 0.3);
       text-decoration: none;
     }
     
     .btn:hover {
       background: var(--hover-color);
       transform: translateY(-1px);
-      box-shadow: 0 5px 12px rgba(255, 167, 179, 0.4);
+      box-shadow: 0 5px 12px rgba(255, 71, 87, 0.4);
     }
     
     .social-text {
       margin: 30px 0 15px;
       font-size: 16px;
       color: var(--text-color);
+      font-weight: 500;
     }
     
     .social-icons {
@@ -99,17 +97,19 @@
       width: 40px;
       height: 40px;
       transition: transform 0.3s ease;
-      opacity: 0.8; /* Полупрозрачность для нежности */
+      opacity: 0.9;
+      filter: brightness(0.9);
     }
     
     .social-icon:hover {
       transform: scale(1.1);
       opacity: 1;
+      filter: brightness(1);
     }
     
     .service-text {
       margin: 30px 0 15px;
-      font-weight: 500;
+      font-weight: 600;
       color: var(--text-color);
     }
     
@@ -117,13 +117,7 @@
       width: 50px;
       margin: 0 auto;
       transition: transform 0.3s ease;
-      opacity: 0.9;
-      filter: drop-shadow(0 2px 3px rgba(255, 182, 193, 0.3));
-    }
-    
-    .whatsapp-icon:hover {
-      transform: scale(1.1);
-      opacity: 1;
+      filter: drop-shadow(0 2px 3px rgba(90, 42, 56, 0.1));
     }
 
     @media (max-width: 360px) {
@@ -133,15 +127,6 @@
       
       .brand-title {
         font-size: 24px;
-      }
-      
-      .btn {
-        font-size: 15px;
-        padding: 12px 0;
-      }
-      
-      .social-icons {
-        gap: 15px;
       }
     }
   </style>
@@ -170,7 +155,7 @@
     
     <p class="service-text">Клиентский сервис</p>
     
-    <a href="https://wa.me/79053283036" target="_blank" rel="noopener">
+    <a href="https://wa.me/79991234567" target="_blank" rel="noopener">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
     </a>
   </div>
