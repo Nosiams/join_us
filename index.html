@@ -6,10 +6,11 @@
   <title>NOSIAMS - Официальный магазин на Wildberries</title>
   <style>
     :root {
-      --primary-color: #FF6B8B;
-      --hover-color: #FF4757;
-      --peach-bg: #FFE8D6;
-      --text-color: #333;
+      --primary-color: #FFB6C1; /* Нежно-розовый */
+      --hover-color: #FFA7B3; /* Чуть насыщеннее при наведении */
+      --bg-color: #FFF0F5; /* Лавандовый румянец (пастельный фон) */
+      --text-color: #555; /* Мягкий серый вместо черного */
+      --accent-color: #FFD1DC; /* Светло-розовый для акцентов */
     }
     
     body {
@@ -17,23 +18,24 @@
       text-align: center;
       padding: 5px;
       margin: 0;
-      line-height: 1.5;
+      line-height: 1.6; /* Увеличим межстрочный интервал */
       min-height: 60vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background-color: #f5f5f5;
+      background-color: var(--bg-color);
       color: var(--text-color);
     }
     
     .container {
-      background-color: var(--peach-bg);
+      background-color: white;
       padding: 40px 20px;
       border-radius: 18px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(255, 182, 193, 0.15); /* Тень с розовым оттенком */
       margin: 0 auto;
       width: 92%;
       max-width: 600px;
+      border: 1px solid var(--accent-color); /* Тонкая розовая рамка */
     }
     
     .brand-title {
@@ -41,6 +43,7 @@
       font-weight: 700;
       margin-bottom: 20px;
       color: var(--primary-color);
+      letter-spacing: 1px; /* Добавим изящества */
     }
     
     .logo {
@@ -49,6 +52,7 @@
       margin: 0 auto 25px;
       display: block;
       transition: transform 0.25s ease;
+      filter: drop-shadow(0 2px 4px rgba(255, 182, 193, 0.3)); /* Розовая тень для лого */
     }
     
     .logo:hover {
@@ -68,19 +72,20 @@
       font-size: 16px;
       transition: all 0.25s ease;
       border: none;
-      box-shadow: 0 3px 8px rgba(255, 107, 139, 0.25);
+      box-shadow: 0 3px 8px rgba(255, 182, 193, 0.3); /* Мягкая тень */
       text-decoration: none;
     }
     
     .btn:hover {
       background: var(--hover-color);
       transform: translateY(-1px);
-      box-shadow: 0 5px 12px rgba(255, 71, 87, 0.3);
+      box-shadow: 0 5px 12px rgba(255, 167, 179, 0.4);
     }
     
     .social-text {
       margin: 30px 0 15px;
       font-size: 16px;
+      color: var(--text-color);
     }
     
     .social-icons {
@@ -94,25 +99,31 @@
       width: 40px;
       height: 40px;
       transition: transform 0.3s ease;
+      opacity: 0.8; /* Полупрозрачность для нежности */
     }
     
     .social-icon:hover {
       transform: scale(1.1);
+      opacity: 1;
     }
     
     .service-text {
       margin: 30px 0 15px;
       font-weight: 500;
+      color: var(--text-color);
     }
     
     .whatsapp-icon {
       width: 50px;
       margin: 0 auto;
       transition: transform 0.3s ease;
+      opacity: 0.9;
+      filter: drop-shadow(0 2px 3px rgba(255, 182, 193, 0.3));
     }
     
     .whatsapp-icon:hover {
       transform: scale(1.1);
+      opacity: 1;
     }
 
     @media (max-width: 360px) {
@@ -127,6 +138,10 @@
       .btn {
         font-size: 15px;
         padding: 12px 0;
+      }
+      
+      .social-icons {
+        gap: 15px;
       }
     }
   </style>
