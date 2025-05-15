@@ -6,11 +6,11 @@
   <title>NOSIAMS - Розыгрыш бесшовных бра</title>
   <style>
     :root {
-      --primary-color: #8B4513; /* Коричневый для основных кнопок */
-      --hover-color: #A0522D; /* Коричневый при наведении */
-      --text-color: #8B4513; /* Коричневый для текста */
-      --pink-color: #E77C8D; /* Точный розовый с фото коробок */
-      --pink-hover: #D96A7B; /* Темнее на 10% при наведении */
+      --primary-color: #8B4513;
+      --hover-color: #A0522D;
+      --text-color: #8B4513;
+      --pink-color: #E77C8D;
+      --pink-hover: #D96A7B;
       --light-text: #FFF;
     }
     
@@ -55,9 +55,9 @@
     }
     
     .logo {
-      width: 160px;
+      width: 112px;
       height: auto;
-      margin: 0 auto 25px;
+      margin: 0 auto 20px;
       display: block;
       transition: transform 0.25s ease;
       border-radius: 15px;
@@ -87,7 +87,7 @@
     }
     
     .social-text {
-      margin: 30px 0 20px;
+      margin: 25px 0 15px;
       font-size: 16px;
       color: var(--text-color);
       font-weight: 500;
@@ -97,14 +97,14 @@
       display: flex;
       justify-content: center;
       gap: 15px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
     
     .social-btn {
       display: inline-block;
       padding: 10px 20px;
-      background: var(--pink-color); /* Точный розовый с фото */
-      color: var(--text-color); /* Коричневый текст */
+      background: var(--pink-color);
+      color: var(--text-color);
       border-radius: 8px;
       font-weight: 500;
       font-size: 15px;
@@ -118,9 +118,16 @@
       border-color: var(--pink-hover);
     }
     
+    .service-text {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
     .contact-btn {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 5px;
       padding: 10px 20px;
       background: var(--primary-color);
       color: white;
@@ -137,23 +144,8 @@
     }
 
     @media (max-width: 360px) {
-      .container {
-        padding: 25px 15px;
-      }
-      
-      .brand-title {
-        font-size: 24px;
-      }
-      
-      .social-buttons {
-        flex-direction: column;
-        gap: 10px;
-      }
-      
-      .social-btn {
-        width: 100%;
-        max-width: 200px;
-        margin: 0 auto;
+      .logo {
+        width: 100px;
       }
     }
   </style>
@@ -174,6 +166,7 @@
       <a href="https://t.me/nosiamsbrand" class="social-btn" target="_blank" rel="noopener">Telegram</a>
     </div>
     
+    <p class="service-text">Клиентский сервис</p>
     <a href="https://wa.me/79053283036" class="contact-btn">Написать</a>
   </div>
 </body>
