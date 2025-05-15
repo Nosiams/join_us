@@ -12,6 +12,7 @@
       --pink-color: #E77C8D;
       --pink-hover: #D96A7B;
       --light-text: #FFF;
+      --btn-width: 280px;
     }
     
     body {
@@ -55,7 +56,7 @@
     }
     
     .logo {
-      width: 129px; /* Увеличен на 15% (было 112px) */
+      width: 129px;
       height: auto;
       margin: 0 auto 12px;
       display: block;
@@ -63,21 +64,26 @@
       border-radius: 15px;
     }
     
-    .btn {
+    /* Унифицированные стили для всех кнопок */
+    .btn, .social-btn, .contact-btn {
       display: block;
-      margin: 12px auto;
+      margin: 10px auto;
       padding: 12px 0;
-      background: var(--primary-color);
-      color: white;
       border-radius: 10px;
       width: 100%;
-      max-width: 280px;
+      max-width: var(--btn-width);
       font-weight: 500;
       font-size: 16px;
       transition: all 0.25s ease;
+      text-decoration: none;
+      text-align: center;
+    }
+    
+    .btn {
+      background: var(--primary-color);
+      color: white;
       border: none;
       box-shadow: 0 3px 8px rgba(139, 69, 19, 0.3);
-      text-decoration: none;
     }
     
     .btn:hover {
@@ -86,36 +92,30 @@
       box-shadow: 0 5px 12px rgba(160, 82, 45, 0.4);
     }
     
-    .social-text {
-      margin: 20px 0 12px;
-      font-size: 16px;
-      color: var(--text-color);
-      font-weight: 500;
-    }
-    
     .social-buttons {
       display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 20px;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
     }
     
     .social-btn {
-      display: inline-block;
-      padding: 10px 20px;
       background: var(--pink-color);
       color: var(--text-color);
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 15px;
-      transition: all 0.25s ease;
       border: 1px solid var(--pink-color);
-      text-decoration: none;
     }
     
     .social-btn:hover {
       background: var(--pink-hover);
       border-color: var(--pink-hover);
+    }
+    
+    .social-text {
+      margin: 20px 0 12px;
+      font-size: 16px;
+      color: var(--text-color);
+      font-weight: 500;
     }
     
     .service-text {
@@ -126,17 +126,9 @@
     }
     
     .contact-btn {
-      display: inline-block;
-      margin-top: 5px;
-      padding: 10px 20px;
       background: var(--primary-color);
       color: white;
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 15px;
-      transition: all 0.25s ease;
       border: 1px solid var(--primary-color);
-      text-decoration: none;
     }
     
     .contact-btn:hover {
@@ -145,7 +137,7 @@
 
     @media (max-width: 360px) {
       .logo {
-        width: 115px; /* Увеличен пропорционально */
+        width: 115px;
       }
     }
   </style>
